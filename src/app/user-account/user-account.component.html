@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <span>Giveaways Exclusive</span>
+  <span style=" flex: 1 1 auto;"></span>
+
+  <button  [routerLink]="['/dashboard']" mat-button>Home</button>
+  <button  [routerLink]="['/account']" mat-button>Account</button>
+  <button  [routerLink]="['/data-visualization']" mat-button>Data Usage</button>
+  <button  [routerLink]="['/landing']" mat-button>Sign Out</button>
+</mat-toolbar>
+
+<mat-card *ngIf="user === null">
+    <h1>Login To See Account Info</h1>
+</mat-card>
+  
+<mat-list>
+  <mat-card *ngIf="record">
+    <mat-card-header>
+      <mat-card-title>Your current Username: {{record.username}}</mat-card-title>
+      <mat-card-subtitle><button mat-button>Edit</button></mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</mat-list>

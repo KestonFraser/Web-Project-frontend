@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <span>Giveaways Exclusive</span>
+  <span style=" flex: 1 1 auto;"></span>
+
+  <button  [routerLink]="['/dashboard']" mat-button>Home</button>
+  <button  [routerLink]="['/account']" mat-button>Account</button>
+  <button  [routerLink]="['/data-visualization']" mat-button>Data Usage</button>
+  <button  [routerLink]="['/landing']" mat-button>Sign Out</button>
+</mat-toolbar>
+
+<highcharts-chart
+  [Highcharts] = "highcharts" 
+  [options] = "chartOptions" 
+  style = "width: 100%; height: 400px; display: block;"
+></highcharts-chart>
